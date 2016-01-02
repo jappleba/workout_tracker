@@ -1,0 +1,33 @@
+<h1>Create a new schedule</h1>
+
+<h3>Please answer the following questions to generate your schedule</h3>
+
+<form action="/create" method="POST">
+  <li>How long can you hold a handstand? (please only select one choice) </li>
+    <input type= "checkbox" name= "exercise[handstand_hold]" value = 1 > I can't hold a handstand on the wall <br>
+    <input type= "checkbox" name= "exercise[handstand_hold]" value = 2 > I can hold a handstand with the wall for less than 30 seconds <br>
+    <input type= "checkbox" name= "exercise[handstand_hold]" value = 3 > I can hold a handstand with the wall for more than 30 seconds but cannot hold a freestanding handstand<br>
+    <input type= "checkbox" name= "exercise[handstand_hold]" value = 4 > I can hold a freestanding handstand for less than 10 seconds<br>
+    <input type= "checkbox" name= "exercise[handstand_hold]" value = 5 > I can hold a freestanding handstand for more than 10 seconds but less than 30 seconds<br>
+    <input type= "checkbox" name= "exercise[handstand_hold]" value = 6 > I can hold a freestanding handstand for more than 30 seconds<br>
+    <br>
+
+  <li>Can you do fingertip pushups? (please only select one choice) </li>
+    <input type= "checkbox" name= "exercise[fingertip_pushup]" value = 1 > I cannot do any fingertip pushups on my knees <br>
+    <input type= "checkbox" name= "exercise[fingertip_pushup]" value = 2 > I can do more than 1 but fewer than 5 fingertip pushups on my knees <br>
+    <input type= "checkbox" name= "exercise[fingertip_pushup]" value = 3 > I can do more than 1 but fewer than 5 full fingertip pushups <br>
+    <input type= "checkbox" name= "exercise[fingertip_pushup]" value = 4 > I can do more than 5 full fingertip pushups<br>
+    <br>
+
+  <li>How many days a week would you like to workout? (please choose a number between 1 and 7) </li>      <input type="text" name="exercise[days]">
+  <br>
+
+  <li>How many exercises would you like to do per day? (please choose a number between 1 and 3 - Please note that each exercise will include a strength and mobility element) </li>      <input type="text" name="exercise[number]">
+  <br>
+
+  <input type="submit" value="Submit">
+
+
+</form>
+
+<p><a href="/logout">Log Out</a></p>
