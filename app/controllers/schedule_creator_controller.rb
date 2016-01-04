@@ -1,7 +1,7 @@
 require "./config/environment"
 require 'pry'
 # require "./app/models/user"
-class ApplicationController < Sinatra::Base
+class ScheduleController < Sinatra::Base
 
   configure do
     set :views, "app/views"

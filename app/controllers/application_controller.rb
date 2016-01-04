@@ -20,8 +20,6 @@ class ApplicationController < Sinatra::Base
   get "/show" do
     @user = User.find(session["id"])
     @schedule = Schedule.find(@user.schedule_id)
-
-    binding.pry
     erb :show_schedule
   end
 
@@ -49,9 +47,10 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/success" do
-    user = User.find(session[:id])
-    if user.schedule_id != nil
+    @user = User.find(session[:id])
+    if @user.schedule_id != nil
       if logged_in?
+        @user = User.find(session[:id])
         erb :account
       else
         redirect "/login"
@@ -60,6 +59,17 @@ class ApplicationController < Sinatra::Base
       redirect "/create"
     end
   end
+
+  get "/edit" do
+    @user = User.find(session[:id])
+    @schedule = Schedule.find(@user.schedule_id)
+    erb :edit
+  end
+
+  post "/edit" do
+    binding.pry
+  end
+
 
   get "/failure" do
     erb :failure

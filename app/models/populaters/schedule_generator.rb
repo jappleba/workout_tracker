@@ -115,14 +115,4 @@ class GenerateSchedule
     end
     calendar_hash
   end
-
-
-#to be deleted once completed
-  def clear_all
-    WorkoutDate.destroy_all
-    Schedule.destroy_all
-    Workout.destroy_all
-  end
-
-
 end

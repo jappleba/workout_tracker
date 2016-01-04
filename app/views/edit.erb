@@ -1,21 +1,31 @@
 <h1>Welcome to Gymnastics Workout Tracker</h1>
 <h2><%=@user.username.upcase%>, here is your schedule</h2>
+<h3>Please edit the workouts you would like to edit</h3>
+<form action="/edit" method="POST">
 
 <% @schedule.workout_dates.each do |x| %>
+  <% if x.workout_date < Time.now %>
   <h3>Date: <%=x.workout_date%></h3>
   <table>
     <th>Exercise</th>
-    <th>Sets</th>
-    <th>Reps</th>
+    <th>Target Sets</th>
+    <th>Target Reps</th>
+    <th>Completed Sets</th>
+    <th>Completed Reps</th>
 
     <% x.workout.base_exercises.each do |y| %>
       <tr>
         <td><%=y.long_name%></td>
         <td><%=y.template.sets%></td>
         <td><%=y.template.reps%></td>
+            <td><input type="text" name="[<%=x.id%>][<%=y.id%>][:reps]" ></td>
+            <td><input type="text" name="[<%=x.id%>][<%=y.id%>][:sets]" ></td>
       </tr>
     <%end%>
+  <%end%>
   </table>
 <%end%>
+<input type="submit" value="Submit">
+</form>
 
 <p><a href="/logout">Log Out</a></p>
