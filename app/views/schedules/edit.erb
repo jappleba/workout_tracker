@@ -1,7 +1,7 @@
 <h1>Welcome to Gymnastics Workout Tracker</h1>
 <h2><%=@user.username.upcase%>, here is your schedule</h2>
 <h3>Please edit the workouts you would like to edit</h3>
-<form action="/edit" method="POST">
+<form action="/schedules/<%=@user.schedule.id%>/edit" method="POST">
 
 <% @schedule.workout_dates.each do |x| %>
   <% if x.workout_date < Time.now %>
@@ -28,4 +28,4 @@
 <input type="submit" value="Submit">
 </form>
 
-<p><a href="/logout">Log Out</a></p>
+<p><a href="/users/logout">Log Out</a></p>

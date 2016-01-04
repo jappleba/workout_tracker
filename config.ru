@@ -1,4 +1,8 @@
-require './app/controllers/application_controller'
-require './app/controllers/schedule_creator_controller.rb'
+require './config/environment'
+# require './app/controllers/application_controller'
+# require './app/controllers/schedule_controller'
+# require './app/controllers/user_controller'
 
-run ApplicationController
+use ApplicationController
+use ScheduleController
+run UserController

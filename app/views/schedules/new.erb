@@ -2,7 +2,7 @@
 
 <h3>Please answer the following questions to generate your schedule</h3>
 
-<form action="/create" method="POST">
+<form action="/schedules/new" method="POST">
   <li>How long can you hold a handstand? (please only select one choice) </li>
     <input type= "checkbox" name= "exercise[handstand_hold]" value = 1 > I can't hold a handstand on the wall <br>
     <input type= "checkbox" name= "exercise[handstand_hold]" value = 2 > I can hold a handstand with the wall for less than 30 seconds <br>
@@ -24,10 +24,9 @@
 
   <li>How many exercises would you like to do per day? (please choose a number between 1 and 3 - Please note that each exercise will include a strength and mobility element) </li>      <input type="text" name="exercise[number]">
   <br>
-
   <input type="submit" value="Submit">
 
 
 </form>
 
-<p><a href="/logout">Log Out</a></p>
+<p><a href="/users/logout">Log Out</a></p>

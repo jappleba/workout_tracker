@@ -1,0 +1,7 @@
+<h1>Welcome, <%=@user.username.upcase%> to Your Handstand Workout Tracker</h1>
+
+<h3><a href="/schedules/<%=@user.schedule.id%>/show">Show your upcoming schedule</a></h3>
+<!-- <h3><a href="/show">Show your previous workouts</a></h3> -->
+<h3><a href="/schedules/<%=@user.schedule.id%>/edit">Add a new completed workout</a></h3>
+
+<p><a href="/users/logout">Log Out</a></p>
