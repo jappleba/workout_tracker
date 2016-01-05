@@ -1,6 +1,6 @@
 <h1>Welcome to Gymnastics Workout Tracker</h1>
-<h2><%=@user.username.upcase%>, here is your schedule</h2>
-<h3>Please edit the workouts you would like to edit</h3>
+<h2><%=@user.username.upcase%>, here are the workouts you should have completed. <br> Please enter the sets and reps for each exercise below.</h2>
+
 <form action="/schedules/<%=@user.schedule.id%>/edit" method="POST">
 
 <% @schedule.workout_dates.each do |x| %>
